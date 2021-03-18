@@ -8,6 +8,7 @@ Para generar pruebas en el sistema se deben seguir las siguientes indicaciones:
 Nivel (2): Por medio de PostMan generar una petición con la url: http://localhost:8080/topsecret 
 Tipo de método: POST.
 En body request enviar como parámetro en formato JSON la información formulada en la problemática con la siguiente estructura:
+
 {
   "satellites": [
     {
@@ -27,6 +28,7 @@ En body request enviar como parámetro en formato JSON la información formulada
     }
   ]
 }
+
 La informacion de cada arreglo como nombres distancias y el mensaje pueden diferir del ejemplo, pero manteniendo la misma estructura y formato.
 En el caso del arreglo del mensaje, se debe cumplir con que cada mensaje tiene un espacio de 5 palabras, sean vacias o no. Esto ultimo para cumplir con el criterio de ordenamiento del mensaje en la respuesta del servicio.
 
@@ -34,9 +36,11 @@ Nivel (3) POST: Por medio de PostMan generar una petición con la url: http://lo
 siendo NOMBRESATELITE el nombre del satélite formulados en el problema (kenobi, skywalker o solo).
 Tipo de método: POST.
 En body request enviar como parámetro en formato JSON la información formulada en la problemática con la siguiente estructura:
+
 {      "distance": 142.7,
       "message": ["este","","un","",""]
 }
+
 En esta petición se debe enviar la información de cada satélite para que luego la respuesta del servicio GET tenga éxito y pueda retornar el mensaje ordenado sea cual sea este último.
 Para enviar la información de cada satélite solo se debe cambiar en la URL el campo NOMBRESATELITE y asignarle en el JSON la información deseada (distance y message)  a cada satélite.
 
